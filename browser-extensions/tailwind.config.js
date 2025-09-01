@@ -5,6 +5,9 @@ export default {
 
   theme: {
     extend: {
+      borderWidth: {
+        '0.5': '0.2px', 
+      },
       colors: {
         neutral: {
           900: "hsl(227, 75%, 14%)",
