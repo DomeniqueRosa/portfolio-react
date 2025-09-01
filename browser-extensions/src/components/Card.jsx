@@ -1,5 +1,5 @@
-
-export default function Card({ title, description, isActive, logo }) {
+import Toggle from "./Toggle";
+export default function Card({ title, description, isActive, logo , setIsActive}) {
 
   return (
     <div className="shadow bg-neutral-50 dark:bg-neutral-800 rounded-xl p-4 m-1 max-w-[380px] h-[200px]">
@@ -15,9 +15,7 @@ export default function Card({ title, description, isActive, logo }) {
           Remove
         </button>
 
-        <button>
-          Trocar
-        </button>
+        <Toggle enabled={isActive} setEnabled={setIsActive} />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import Data from "../data.json"
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const [isActive, setIsActive] = useState(true)
 
   function handTheme() {
     document.documentElement.classList.toggle("dark");
@@ -17,7 +18,7 @@ function App() {
         <Header isDark={isDark} handTheme={handTheme} />
         <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2">
           {Data.map((item) => <Card title={item.name} description={item.description} isActive={item.isActive}
-          logo={item.logo} key={item.name}/>)}
+          logo={item.logo} key={item.name} setIsActive={setIsActive}/>)}
         </div>
       </div>
     </>
