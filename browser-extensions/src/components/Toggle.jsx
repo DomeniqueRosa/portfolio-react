@@ -1,11 +1,10 @@
 
 
 export default function Toggle({enabled, setEnabled}) {
-  
 
   return (
     <button
-      onClick={() => setEnabled(!enabled)}
+      onClick={setEnabled}
       className={`
         relative inline-flex h-6 w-12 items-center rounded-full 
         transition-colors duration-300 

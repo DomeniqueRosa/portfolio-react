@@ -1,6 +1,6 @@
 import Toggle from "./Toggle";
 import Button from "./Button";
-export default function Card({ title, description, isActive, logo , setIsActive}) {
+export default function Card({ title, description, isActive, logo , setIsActive, handleRemove}) {
 
   return (
     <div className="shadow bg-neutral-50 dark:bg-neutral-800 rounded-xl p-4 m-1 max-w-[380px] h-[200px]">
@@ -13,7 +13,7 @@ export default function Card({ title, description, isActive, logo , setIsActive}
       </div>
       <div className="flex items-center justify-between mt-6">
         
-        <Button title='Remover' handle={() => alert("clicou")}/>
+        <Button title='Remover' handle={handleRemove} />
         <Toggle enabled={isActive} setEnabled={setIsActive} />
       </div>
     </div>

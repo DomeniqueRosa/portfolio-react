@@ -5,6 +5,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily : {
+        'noto' : ['"Noto Sans"', 'sans-serif']
+      },
       borderWidth: {
         '0.5': '0.2px', 
       },
@@ -23,10 +26,6 @@ export default {
           400: "hsl(3, 86%, 64%)",
           500: "hsl(3, 71%, 56%)",
           700: "hsl(3, 77%, 44%)",
-        },
-        gradient: {
-          light: `linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)`,
-          dark: `linear-gradient(180deg, #040918 0%, #091540 100%)`,
         },
       },
     },
