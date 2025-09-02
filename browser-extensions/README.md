@@ -20,7 +20,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Link para o repositório](https://github.com/DomeniqueRosa/portfolio-react/edit/main/browser-extensions)
-- Live Site URL: [Link para o site ao vivo](https://portfolio-react-jeg465qr3-domeniquerosas-projects.vercel.app/)
+- Live Site URL: [Link para o site ao vivo](https://portfolio-react-rust-six.vercel.app/)
 
 ## My process
 
