@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Data from "../data.json";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [filtro, setFiltro] = useState("all");
   const [data, setData] = useState(Data);
+
+  useEffect(() =>{
+    document.documentElement.classList.add("dark");
+  }, [])
 
   function handTheme() {
     document.documentElement.classList.toggle("dark");
