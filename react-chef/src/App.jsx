@@ -3,6 +3,7 @@ import Header from "./Header";
 import Input from "./Input";
 import { FaCheckSquare } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
+import { getRecipe } from "./services/ia";
 
 function App() {
   const [ingredient, setIngredient] = useState([]);
@@ -16,6 +17,16 @@ function App() {
     }
   }
 
+  async function handleRecipe(ing) {
+    try {
+      const r = await getRecipe(ing);
+    } catch (error) {
+      console.error(error)
+      
+    }
+    return r;
+  }
+
   const listIngridients = ingredient.map((item, index) => (
     <li key={index} className="flex gap-2 py-2">
       <FaCheckSquare className="w-3 mt-1" />
@@ -23,7 +34,6 @@ function App() {
     </li>
   ));
 
-  function handleRecipe() {}
   return (
     <>
       <div className="bg-[#FAFAf8] min-h-screen">
@@ -43,7 +53,7 @@ function App() {
               <div>
                 <button
                   className="p-2 bg-orange-400 rounded-md text-white hover:bg-orange-500"
-                  onClick={notify}
+                  onClick={handleRecipe(ingredient)}
                 >
                   Get a recipe
                 </button>
