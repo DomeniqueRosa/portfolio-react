@@ -32,11 +32,11 @@ function App() {
       });
       const r = await getRecipe(ing);
       setRecipe(r);
-      toast.dismiss();
     } catch (error) {
       console.error(error);
     } finally {
       setDisableBottom(false);
+      toast.dismiss();
     }
   }
   function remove(item){
