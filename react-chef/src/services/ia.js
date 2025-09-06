@@ -35,9 +35,11 @@ Você é um assistente de culinária inteligente, amigável e prestativo. Sua mi
 
 
 **Importante:** Sempre formate sua resposta em **Markdown** para facilitar a leitura. Estou usando **react-markdown**, então deixe no formato adequado para boa leitura, utilizando listas para os ingredientes, títulos para o nome da receita e destaques quando necessário. As receitas devem estar sempre em **português-br** `;
-const hf = new HfInference(process.env.REACT_APP_HUGGY_API_KEY);
+const hf = new HfInference(import.meta.env.VITE_APP_HUGGY_API_KEY);
 
 export async function getRecipe(ingredientsArr) {
+  console.log(import.meta.env.VITE_APP_HUGGY_API_KEY); // só para testar se está pegando
+
   const ingredientsString = ingredientsArr.join(", ");
   try {
     const response = await hf.chatCompletion({
