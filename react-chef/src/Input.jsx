@@ -11,9 +11,9 @@ export default function Input({ setIngredient, onWarm }) {
   function addIngredient(formData) {
     const newIng = formData.get("ingredient");
     //regex para verificar se a string contem numeros ou caracteres especiais
-    const isValid = /^[a-zA-Z\p{L}\s]+$/u.test(newIng);
+    // const isValid = /^[a-zA-Z\p{L}\s]+$/u.test(newIng);
 
-    if (newIng !== "" && isValid) {
+    if (newIng) {
       setIngredient((prev) => [...prev, newIng]);
     } else {
       onWarm();
@@ -28,7 +28,7 @@ export default function Input({ setIngredient, onWarm }) {
       >
         <input
           type="text"
-          placeholder="e.g oregano"
+          placeholder="ex: 2 ovos"
           className="rounded-md border-2 w-full"
           name="ingredient"
         />
