@@ -34,6 +34,7 @@ function App() {
       setRecipe(r);
     } catch (error) {
       console.error(error);
+      toast.error("Erro na requisição:", error)
     } finally {
       setDisableBottom(false);
       toast.dismiss();
