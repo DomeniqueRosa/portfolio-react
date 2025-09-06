@@ -1,4 +1,4 @@
-export default function Input({ setIngredient, ingredient, onWarm }) {
+export default function Input({ setIngredient, onWarm }) {
   //   function handleForm(e) {
   //     e.preventDefault();
   //     const formy = e.currentTarget
@@ -8,7 +8,6 @@ export default function Input({ setIngredient, ingredient, onWarm }) {
   //     // para limpar os input depois de pegar os dados
   //     formy.reset()
   //   }
-  console.log(ingredient);
   function addIngredient(formData) {
     const newIng = formData.get("ingredient");
     //regex para verificar se a string contem numeros ou caracteres especiais
@@ -25,12 +24,12 @@ export default function Input({ setIngredient, ingredient, onWarm }) {
     <>
       <form
         action={addIngredient}
-        className="flex justify-center gap-4 mt-9 w-full"
+        className="flex justify-center gap-4 mt-9"
       >
         <input
           type="text"
           placeholder="e.g oregano"
-          className="w-[50%] rounded-md border-2 p-2"
+          className="rounded-md border-2 w-full"
           name="ingredient"
         />
 
@@ -38,7 +37,7 @@ export default function Input({ setIngredient, ingredient, onWarm }) {
           className="bg-slate-800 p-2 rounded-md text-white"
           type="submit"
         >
-          + Add ingredientes
+          + Ingredientes
         </button>
       </form>
     </>
