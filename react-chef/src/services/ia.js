@@ -38,7 +38,6 @@ Você é um assistente de culinária inteligente, amigável e prestativo. Sua mi
 const hf = new HfInference(import.meta.env.VITE_APP_HUGGY_API_KEY);
 
 export async function getRecipe(ingredientsArr) {
-  console.log(import.meta.env.VITE_APP_HUGGY_API_KEY); // só para testar se está pegando
 
   const ingredientsString = ingredientsArr.join(", ");
   try {
